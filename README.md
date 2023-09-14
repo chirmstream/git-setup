@@ -1,5 +1,5 @@
 # VerifiedCommits
-Setting up verified commits on MacOS for GitHub.
+XCode does not allow for signing your commits using GPG so they will not show up as verified on GitHub.  This guide will allow you to push your verified commits using GitHub Desktop (no CLI makes it easier for beginners) on MacOS.
 
 ### Generate the GPG Key
 ### Install GPG command line tools.
