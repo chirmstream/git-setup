@@ -48,3 +48,5 @@ Add a passphrase as required.
         program = gpg2
     [commit]
         gpgsign = true
+
+##### *pinentry and homebrew may be needed if you wish to require a password everytime you sign a commit.*
