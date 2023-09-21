@@ -9,4 +9,3 @@
 ### Configure git
     git config --global user.name "firstLast"
     git config --global user.email "example@gmail.com"
-    git config --global commit.gpgsign true
