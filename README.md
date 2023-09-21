@@ -38,15 +38,18 @@ Add a passphrase as required.
 ### Add the GPG key to your GitHub account.
 
 ### Configure Git to Use GPG Key
+    git config --global user.signingkey <key id>
+    git config --global commit.gpgsign true
 
 ### Make sure your .gitconfig contains the following information
+Get global git configuration:
 
-    [user]
-        email = <Git user email>
-        name = <Git user name>
-    [gpg]
-        program = gpg2
-    [commit]
-        gpgsign = true
+    git config --list
+Should contain:
+
+    user.name='username'
+    user.email='example.email@gmail.com'
+    user.signingkey='examplekey'
+    commit.gpgsign=true
 
 ##### *pinentry and homebrew may be needed if you wish to require a password everytime you sign a commit.*
