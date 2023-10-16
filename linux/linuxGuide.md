@@ -51,7 +51,7 @@ Should contain:
     user.signingkey='examplekey'
     commit.gpgsign=true
 
-If missing user.name and email simply add using:
+If missing user.name and user.email simply add using:
 
     git config --global user.name='username'
     git config --global user.email-'example.email@gmail.com'
