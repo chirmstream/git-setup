@@ -52,4 +52,8 @@ Should contain:
     user.signingkey='examplekey'
     commit.gpgsign=true
 
+To change your email use:
+
+    git config --global user.email "example.email@gmail.com"
+
 ##### *pinentry and homebrew may be needed if you wish to require a password everytime you sign a commit.*
