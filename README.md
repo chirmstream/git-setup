@@ -37,6 +37,16 @@ Add a passphrase as required.
 
     gpg --armor --export <key id>
 
+Example output:
+
+>-----BEGIN PGP PUBLIC KEY BLOCK-----
+>
+>...
+>
+>...
+>
+>-----END PGP PUBLIC KEY BLOCK-----
+
 ### Add exported gpg key to github
 Settings > SSH and GPG keys > New GPG key
 
@@ -65,3 +75,24 @@ Should contain:
 Since VSCode and WSL are running different systems, you may experience issues when making your commit with Git not finding your gpg keys.  If you make your commit in the WSL terminal however, it should work.
 
     git commit -S -m "your commit message here"
+
+
+## Deleting keys
+Show all your current keys:
+
+    gpg --list-keys
+
+Example output:
+
+    --------------------------------
+    pub   rsa3072 2023-11-07 [SC]
+        AAF113832923E6BA2EF4FD5576A1BD04A19D987D
+    uid           [ultimate] username (example-comment) <example@exampledomain.com>
+    sub   rsa3072 2023-11-07 [E]
+
+In this example your uid is ```username```.
+
+To delete your key use:
+
+    gpg --delete-secret-key [uid]
+    gpg --delete-key [uid]
