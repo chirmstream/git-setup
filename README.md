@@ -71,10 +71,22 @@ Should contain:
     user.signingkey='examplekey'
     commit.gpgsign=true
 
-## WSL Notes
-Since VSCode and WSL are running different systems, you may experience issues when making your commit with Git not finding your gpg keys.  If you make your commit in the WSL terminal however, it should work.
+## Exporting/Importing Keys
+Exports all keys into home directory:
 
-    git commit -S -m "your commit message here"
+    gpg -o private.gpg --export-options backup --export-secret-keys
+
+To export a specific key use:
+
+    gpg -o private.gpg --export-options backup --export-secret-keys <key-email>
+
+Import (will need to set owner trust afterwards):
+
+    gpg --import-options restore --import private.gpg
+
+To import with the maximum ownertrust at the same time use:
+
+    gpg --import -ownertrust private.gpg
 
 
 ## Deleting keys
@@ -96,3 +108,9 @@ To delete your key use:
 
     gpg --delete-secret-key [uid]
     gpg --delete-key [uid]
+
+
+## WSL Notes
+Since VSCode and WSL are running different systems, you may experience issues when making your commit with Git not finding your gpg keys.  If you make your commit in the WSL terminal however, it should work.
+
+    git commit -S -m "your commit message here"
