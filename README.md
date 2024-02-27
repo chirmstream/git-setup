@@ -57,8 +57,8 @@ Settings > SSH and GPG keys > New GPG key
 ## Configuring Git
 ### Set username and email (if not already done):
 
-    git config --global user.name='username'
-    git config --global user.email-'example.email@gmail.com'
+    git config --global user.name 'username'
+    git config --global user.email 'example.email@gmail.com'
 
 ### Confirm Git configuration:
 
